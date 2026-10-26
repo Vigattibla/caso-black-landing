@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14110e">
+<meta name="robots" content="noindex">
+<title>Caso Black · Village Resort</title>
+<meta name="description" content="Achamos a Black do Village: veja os descontos e reserve no Village Resort, em Jaboticatubas (MG).">
+<link rel="preload" href="fonts/anton.woff" as="font" type="font/woff" crossorigin>
+<style>
+@font-face{font-family:Anton;src:url(fonts/anton.woff) format('woff');font-display:swap}
+@font-face{font-family:'Courier Prime';src:url(fonts/courier-400.woff) format('woff');font-display:swap}
+@font-face{font-family:'Courier Prime';src:url(fonts/courier-700.woff) format('woff');font-weight:700;font-display:swap}
+@font-face{font-family:Caveat;src:url(fonts/caveat-700.woff) format('woff');font-weight:700;font-display:swap}
+@font-face{font-family:Montserrat;src:url(fonts/mont-600.woff) format('woff');font-weight:600;font-display:swap}
+@font-face{font-family:Montserrat;src:url(fonts/mont-800.woff) format('woff');font-weight:800;font-display:swap}
+
+:root{
+  --ink:#111;--paper:#fbf6ea;--paper-b:#efe6d2;--kraft:#c79e62;--kraft-2:#b48a4e;--kraft-3:#9c7440;
+  --red:#c8102e;--yellow:#ffc600;--blue:#1f3a8a;--white:#fff;--muted:#6b6254;--desk:#14110e;
+  --display:Anton,Impact,'Arial Narrow',sans-serif;
+  --type:'Courier Prime','Courier New',monospace;
+  --hand:Caveat,'Comic Sans MS',cursive;
+  --sans:Montserrat,system-ui,sans-serif;
+  --gut:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--desk);color:var(--ink);font:600 16px/1.5 var(--sans);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:48px;padding:0 1.3em;border:3px solid var(--ink);border-radius:4px;
+  font:800 .95rem/1 var(--sans);text-transform:uppercase;letter-spacing:.03em;text-decoration:none;cursor:pointer;background:var(--yellow);color:var(--ink);
+  box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.kicker{font:700 .74rem/1 var(--type);letter-spacing:.14em;text-transform:uppercase}
+.sticker{font-family:var(--display);text-transform:uppercase;line-height:.95;color:var(--white);
+  text-shadow:3px 3px 0 var(--ink),-1px -1px 0 var(--ink),1px -1px 0 var(--ink),-1px 1px 0 var(--ink)}
+
+/* ============ TOPO FIXO ============ */
+.top{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px var(--gut);
+  background:linear-gradient(180deg,rgba(20,17,14,.95),rgba(20,17,14,0))}
+.top img{height:36px;width:auto}
+.relogio{display:flex;align-items:center;gap:10px;color:#f4f1ea}
+.relogio .c-l{font:700 .6rem/1.2 var(--type);letter-spacing:.14em;text-transform:uppercase;max-width:8.5em}
+.relogio .c-n{display:flex;gap:4px;font:400 1.15rem/1 var(--display);color:var(--yellow);text-transform:uppercase}
+.c-u{display:grid;justify-items:center;min-width:40px;padding:5px 4px 4px;background:#1c1c1c;border:1px solid #3d3d3d;border-radius:4px}
+.c-u b{font:400 1.3rem/1 var(--display);color:var(--yellow);font-variant-numeric:tabular-nums}
+.c-u i{font:700 .48rem/1 var(--type);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:#a8a8a8;margin-top:3px}
+.zap{position:fixed;right:16px;bottom:16px;z-index:31;display:grid;place-items:center;width:58px;height:58px;border:2px solid var(--ink);border-radius:50%;
+  background:var(--paper);color:#128c3e;box-shadow:3px 3px 0 var(--ink);transform:rotate(-6deg);transition:transform .2s,box-shadow .2s}
+.zap:hover{transform:rotate(0) translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.zap svg{width:28px;height:28px}
+.zap[hidden],.btn[hidden],.lnk[hidden]{display:none}
+.fr.fim{justify-content:center;align-items:center;text-align:center}
+.fr.fim .kicker{position:absolute;top:7cqh;left:7cqw}
+.carimbo-fim{border:5px solid var(--red);color:var(--red);padding:.2em .5em;font:400 clamp(2rem,12cqw,3.8rem)/.95 var(--display);text-transform:uppercase;transform:rotate(-5deg);opacity:.92}
+.fr.fim .h2{margin-top:4.5cqh;max-width:13ch;font-size:clamp(1.6rem,8.4cqw,2.9rem)}
+.fim-l{margin-top:2.4cqh;font:400 clamp(.86rem,3.8cqw,1.1rem)/1.5 var(--type)}
+.fim-l b{font:400 1.35em/1 var(--display);color:var(--red)}
+.fr.fim .acoes{display:grid;gap:1.6cqh;margin-top:5cqh;width:100%}
+.btn-zap{background:#25d366}
+.btn-zap svg{width:22px;height:22px}
+.lnk{font:700 clamp(.7rem,3cqw,.85rem)/1.2 var(--type);color:var(--ink);text-align:center;text-decoration:underline}
+.avs{display:grid;flex:1 1 auto;margin-top:3cqh;align-items:center}
+.av-g{grid-area:1/1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqh;opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s}
+.av-g.on{opacity:1;visibility:visible}
+.av{position:relative;background:var(--white);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:1.6cqh 5cqw;transform:rotate(-1deg)}
+.av:nth-child(2){transform:rotate(.8deg) translateX(2cqw)}
+.av .st{color:var(--red);font-size:clamp(.85rem,3.6cqw,1.1rem);letter-spacing:.12em}
+.av p{font:400 clamp(.7rem,3cqw,.9rem)/1.45 var(--type);margin:.6cqh 0 .8cqh;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.av footer{all:unset;display:block;font:700 clamp(1rem,4.6cqw,1.4rem)/1 var(--hand);color:var(--blue)}
+.pontos{display:flex;justify-content:center;gap:2px;margin-top:2.4cqh}
+.pontos button{width:24px;height:24px;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.pontos button::after{content:"";width:9px;height:9px;border-radius:50%;border:2px solid currentColor}
+.pontos button[aria-current=true]::after{background:currentColor}
+.nota{font:800 clamp(.72rem,3.2cqw,1rem)/1.2 var(--sans);text-transform:uppercase;margin-top:1cqh}
+@media(max-width:999px){.top{justify-content:center;padding:8px var(--gut);background:var(--ink)}.top img,.top .btn{display:none}.stage{padding-top:54px!important}.pasta{--h:min(calc(100svh - 110px),790px)!important}}
+.top .btn{min-height:40px;font-size:.78rem;padding:0 1em;box-shadow:3px 3px 0 var(--ink)}
+
+/* mesa */
+.desk{background:var(--desk)}
+/* cenário: cena do crime na piscina, escurecida atrás da pasta */
+.stage{isolation:isolate}
+.stage::before{content:"";position:absolute;inset:-20px;z-index:-2;background:url(../assets/cena-crime.webp) center 60%/cover;filter:blur(4px) brightness(.42) saturate(.85)}
+.stage::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(75% 65% at 50% 50%,rgba(13,13,13,.15),rgba(13,13,13,.85))}
+
+/* ============ PALCO / PASTA ============ */
+.scroller{position:relative;height:calc(var(--n) * 95svh + 5svh)}
+@media(max-width:999px){.scroller{height:calc(var(--n) * 170svh + 5svh)}}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;perspective:2400px;display:grid;place-items:center;padding-top:44px}
+.pasta{--h:min(calc(100svh - 76px),790px);position:relative;height:var(--h);aspect-ratio:.72;max-width:calc(100vw - 2*var(--gut) - 30px);
+  transform-style:preserve-3d;container-type:size;margin-right:30px}
+@media(min-width:1000px){.pasta{margin-right:0}}
+/* fundo da pasta (contracapa kraft) */
+.pasta::before{content:"";position:absolute;inset:-6px -8px -8px -6px;background:var(--kraft-2);border-radius:6px 12px 10px 6px;box-shadow:0 30px 60px rgba(0,0,0,.55);transform:translateZ(-2px)}
+
+/* abas laterais */
+.tabs{position:absolute;left:100%;top:9%;display:flex;flex-direction:column;gap:6px;transform:translateZ(-1px)}
+.tabs button{appearance:none;border:0;cursor:pointer;writing-mode:vertical-rl;font:700 clamp(.58rem,1.7cqh,.74rem)/1 var(--type);letter-spacing:.14em;text-transform:uppercase;
+  padding:1.1em .55em;margin-left:-4px;border-radius:0 8px 8px 0;color:var(--ink);background:var(--tab,#e9dcc0);box-shadow:3px 3px 0 rgba(0,0,0,.25);transition:transform .2s,padding .2s}
+.tabs button:nth-child(1){--tab:var(--kraft)}
+.tabs button:nth-child(2){--tab:#f1e6cc}
+.tabs button:nth-child(3){--tab:#d8d0c0}
+.tabs button:nth-child(4){--tab:#e8d27a}
+.tabs button:nth-child(5){--tab:#f4f1ea}
+.tabs button:nth-child(6){--tab:#3a3a3a;color:var(--white)}
+.tabs button[aria-current=true]{padding-right:.95em;outline:2px solid var(--ink);outline-offset:-2px}
+
+/* folhas */
+.pg{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;will-change:transform}
+.pg>.fr,.pg>.bk{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;border-radius:2px 6px 6px 2px;
+  padding:7cqh 7cqw 5cqh;display:flex;flex-direction:column}
+.pg>.bk{transform:rotateY(180deg);border-radius:6px 2px 2px 6px}
+.fr,.bk{background:var(--paper);background-image:radial-gradient(rgba(0,0,0,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.06),transparent 6%);background-size:4px 4px,100% 100%;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.bk{background-color:var(--paper-b);background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px),linear-gradient(270deg,rgba(0,0,0,.08),transparent 8%)}
+/* sombra durante a virada */
+.pg>.fr::after,.pg>.bk::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0) 70%);opacity:calc(var(--sh,0) * .9)}
+
+.h2{font:400 clamp(1.5rem,8.4cqw,3.1rem)/1 var(--display);text-transform:uppercase;margin-top:1.6cqh}
+.txt{font:400 clamp(.82rem,3.5cqw,1.05rem)/1.5 var(--type);margin-top:1.6cqh}
+.hand{font:700 clamp(1.15rem,5.6cqw,1.8rem)/1.1 var(--hand);color:var(--blue)}
+
+/* ---- capa ---- */
+.capa{background:linear-gradient(155deg,#d6a865,#c99a5b 55%,#b8864a)!important;padding:0!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12),inset -12px 0 20px rgba(0,0,0,.1)!important}
+.capa::before,.capa-in::before{content:"";position:absolute;inset:0;background:url(../assets/ruido.webp);opacity:.45;mix-blend-mode:multiply;pointer-events:none}
+.etq{position:absolute;left:8cqw;top:5.5cqh;width:68cqw;background:#f4f1ea;padding:3cqw 4cqw;transform:rotate(-1.5deg);box-shadow:0 1px 2px rgba(0,0,0,.2)}
+.etq .eTop{display:flex;justify-content:space-between;gap:2cqw;font:700 clamp(.5rem,2.4cqw,.72rem)/1 var(--type);letter-spacing:.16em;color:#666;border-bottom:1.5px solid var(--ink);padding-bottom:1.4cqw}
+.etq .eTop span{white-space:nowrap}
+.etq .eTop span:last-child{background:var(--ink);color:#f4f1ea;padding:1px 5px}
+.etq>b{display:block;font:400 clamp(1.2rem,6.6cqw,2rem)/1 var(--display);text-transform:uppercase;margin:2.2cqw 0 1.6cqw}
+.etq .eLin{display:flex;align-items:baseline;gap:2cqw;border-bottom:1px solid rgba(0,0,0,.25);padding:.6cqw 0}
+.etq .eLin span{font:700 clamp(.46rem,2.2cqw,.66rem)/1 var(--type);letter-spacing:.14em;color:#555;flex:none}
+.etq .eLin em{font:700 clamp(1rem,5.2cqw,1.6rem)/1.1 var(--hand);color:#1b2a6b;font-style:normal}
+.etq .eSt{margin-top:2cqw;font:700 clamp(.5rem,2.4cqw,.72rem)/1 var(--type);letter-spacing:.16em;color:#555}
+.etq .eSt i{font:400 clamp(.66rem,3.2cqw,.95rem)/1 var(--display);letter-spacing:.12em;font-style:normal;color:var(--red);border:1.5px solid var(--red);padding:1px 5px;margin-left:4px;display:inline-block;transform:rotate(-3deg)}
+.capa .logo{position:absolute;left:9cqw;right:18cqw;top:40cqh}
+.capa .logo img{width:100%;filter:drop-shadow(0 3px 0 rgba(0,0,0,.12))}
+.capa .selo{position:absolute;right:17cqw;bottom:19cqh;width:50cqw;transform:rotate(-10deg);mix-blend-mode:multiply;opacity:.9}
+.capa .elastico{position:absolute;top:0;bottom:0;right:11cqw;width:2.4cqw;max-width:9px;background:linear-gradient(90deg,#1c1c1c,#3a3a3a,#1c1c1c);box-shadow:2px 0 3px rgba(0,0,0,.25)}
+.capa .fita{position:absolute;left:-20cqw;right:-20cqw;top:30cqh;transform:rotate(-8deg);box-shadow:0 4px 8px rgba(0,0,0,.25)}
+.fita{background:var(--yellow);color:var(--ink);font:400 clamp(.7rem,3.2cqw,.95rem)/1 var(--display);letter-spacing:.14em;white-space:nowrap;overflow:hidden;padding:1.2cqw 0}
+.countdown{position:absolute;left:7cqw;bottom:13cqh;display:flex;flex-direction:column;gap:6px;font-family:var(--type);color:var(--ink)}
+.countdown .lbl{font:700 clamp(.6rem,2.6cqw,.78rem)/1 var(--type);letter-spacing:.12em;text-transform:uppercase}
+.countdown .row{display:flex;border:2px solid var(--ink);background:#f3e7cc}
+.countdown .n{display:flex;flex-direction:column;align-items:center;padding:.3em .55em;min-width:3em}
+.countdown .n+.n{border-left:2px dashed var(--ink)}
+.countdown b{font:400 clamp(1.1rem,6cqw,1.8rem)/1 var(--display)}
+.countdown small{font-size:clamp(.55rem,2.2cqw,.68rem);letter-spacing:.1em;text-transform:uppercase}
+.hint{position:absolute;left:0;right:0;bottom:3.5cqh;display:flex;justify-content:center;align-items:center;gap:.5em;font:700 clamp(.66rem,2.8cqw,.82rem)/1 var(--type);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.hint svg{width:16px;height:16px}
+.achado{margin:0 auto;text-align:center;border:3px solid var(--red);color:var(--red);padding:1.8cqh 5cqw;transform:rotate(-4deg);mix-blend-mode:multiply}
+.achado span{display:block;font:700 clamp(.6rem,2.6cqw,.8rem)/1 var(--type);letter-spacing:.2em;text-transform:uppercase}
+.achado b{display:block;font:400 clamp(1.5rem,8cqw,2.6rem)/1 var(--display);text-transform:uppercase;margin:1.4cqh 0}
+.achado em{display:block;font:700 clamp(1rem,5cqw,1.5rem)/1.2 var(--hand);font-style:normal;color:var(--ink)}
+.capa-in{background:var(--kraft-3)!important;background-image:radial-gradient(rgba(0,0,0,.08) 1px,transparent 1px)!important;background-size:5px 5px!important;justify-content:center}
+
+/* ---- ocorrência ---- */
+.facts{list-style:none;font:400 clamp(.78rem,3.4cqw,1rem)/1.4 var(--type);border-top:2px dashed #cbbd9e;margin-top:2.4cqh}
+.facts li{display:grid;grid-template-columns:7.2em 1fr;gap:8px;padding:1.1cqh 0;border-bottom:2px dashed #cbbd9e}
+.facts b{font-weight:700;text-transform:uppercase;font-size:.8em;letter-spacing:.08em;padding-top:.15em}
+.facts .red{color:var(--red);font-weight:700}
+.lucas{position:absolute;right:3cqw;bottom:2cqh;width:34cqw}
+.p1 .hand{margin-top:auto;max-width:52cqw;transform:rotate(-3deg)}
+
+/* ---- suspeitos ---- */
+.sus{display:grid;grid-template-columns:repeat(6,1fr);gap:3cqw;margin-top:3cqh}
+.sus figure{grid-column:span 2;background:var(--white);padding:1.6cqw 1.6cqw 0;box-shadow:0 4px 10px rgba(0,0,0,.15);text-align:center}
+.sus figure:nth-child(4){grid-column:2/span 2}
+.sus figure:nth-child(odd){transform:rotate(-2deg)}
+.sus figure:nth-child(even){transform:rotate(2deg)}
+.sus img{aspect-ratio:1;object-fit:cover;width:100%;background:#e9e2d3}
+.sus figcaption{font:700 clamp(.56rem,2.5cqw,.76rem)/1 var(--type);letter-spacing:.04em;text-transform:uppercase;padding:1.4cqw 0}
+.sus figure.x{background:var(--ink);color:var(--white)}
+.sus figure.x figcaption{color:var(--red)}
+
+/* ---- como jogar ---- */
+.rs-hosp{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;margin-top:2cqh}
+.cont{display:flex;flex-direction:column;align-items:center;gap:1cqh;border:2px solid var(--ink);background:#fff;padding:1cqh 2cqw}
+.cont span{font:700 clamp(.56rem,2.5cqw,.76rem)/1 var(--type);letter-spacing:.08em;text-transform:uppercase}
+.cont div{display:flex;align-items:center;gap:1.6cqw}
+.cont button,.cal-top button{width:clamp(26px,7.6cqw,34px);aspect-ratio:1;border:2px solid var(--ink);border-radius:50%;background:var(--yellow);color:var(--ink);font:800 1rem/1 var(--sans);cursor:pointer;display:grid;place-items:center}
+.cont button:disabled,.cal-top button:disabled{opacity:.3;cursor:default}
+.cont b{font:400 clamp(1rem,5cqw,1.5rem)/1 var(--display);min-width:1.1em;text-align:center}
+.cal{margin-top:1.8cqh;border:2px solid var(--ink);background:#fff;padding:1.2cqh 2.4cqw}
+.cal-top{display:flex;justify-content:space-between;align-items:center;font:400 clamp(1rem,4.6cqw,1.4rem)/1 var(--display);text-transform:uppercase}
+.cal-top button{background:var(--paper)}
+.cal-sem,.cal-dias{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
+.cal-sem{font:700 clamp(.5rem,2.2cqw,.66rem)/1 var(--type);color:var(--muted);margin:1.2cqh 0 .6cqh}
+.cal-dias button{aspect-ratio:1.3;border:0;background:none;color:var(--ink);font:700 clamp(.72rem,3.2cqw,.95rem)/1 var(--sans);cursor:pointer;border-radius:3px}
+.cal-dias button:disabled{color:#c4c4c4;cursor:default}
+.cal-dias .meio{background:#fff1bd;border-radius:0}
+.cal-dias .ini,.cal-dias .fim{background:var(--ink);color:var(--yellow)}
+.rs-res{font:700 clamp(.64rem,2.7cqw,.8rem)/1.35 var(--type);margin:1.2cqh 0;min-height:2.7em}
+#rs-ir{margin-top:auto}
+.trilha{display:grid;grid-template-columns:repeat(5,1fr);gap:1.6cqw;margin-top:2.6cqh}
+.trilha figure{background:var(--white);padding:1.2cqw 1.2cqw 0;box-shadow:0 3px 8px rgba(0,0,0,.15)}
+.trilha .ph{aspect-ratio:1;background:#1a1a1a;position:relative;overflow:hidden;display:grid;place-items:center}
+.trilha img{width:100%;height:100%;object-fit:cover}
+.trilha .ph b{font:400 clamp(.6rem,2.8cqw,.9rem)/1 var(--display);color:var(--yellow);letter-spacing:.04em}
+.trilha figcaption{font:700 clamp(.46rem,2cqw,.64rem)/1 var(--type);text-transform:uppercase;text-align:center;padding:1.2cqw 0}
+.casa{margin-top:auto;border:2px dashed var(--ink);padding:1.6cqh 3cqw;font:400 clamp(.74rem,3.2cqw,.95rem)/1.4 var(--type)}
+.casa b{font:800 .9em/1 var(--sans);text-transform:uppercase}
+
+/* ---- vip ---- */
+.vip{background:#1b1b1b!important;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px)!important;background-size:4px 4px!important;color:var(--white)}
+.vip .kicker{color:var(--yellow)}
+.vip .h2 em{font-style:normal;color:var(--yellow)}
+.vip .txt{color:#e6decd}
+.vip .lock{width:30cqw;filter:invert(1);position:absolute;right:5cqw;top:5cqh;opacity:.9}
+.timeline{list-style:none;margin-top:3cqh;border-left:3px solid var(--yellow);padding-left:5cqw;display:grid;gap:2.2cqh}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:calc(-5cqw - 9px);top:.2em;width:15px;height:15px;border-radius:50%;background:#1b1b1b;border:3px solid var(--yellow)}
+.timeline li.now::before{background:var(--yellow)}
+.timeline b{display:block;font:400 clamp(.95rem,4.6cqw,1.35rem)/1 var(--display);letter-spacing:.04em;color:var(--yellow)}
+.timeline span{font:400 clamp(.74rem,3.2cqw,.95rem)/1.4 var(--type);color:#e6decd}
+.locked{display:inline-flex;align-items:center;gap:.5em;margin-top:auto;align-self:flex-start;border:2px dashed #888;padding:.8em 1em;font:700 clamp(.66rem,2.8cqw,.82rem)/1.3 var(--type);letter-spacing:.06em;text-transform:uppercase;color:#bbb}
+.locked svg{width:16px;height:16px;flex:none}
+
+
+.small{font:400 clamp(.62rem,2.6cqw,.76rem)/1.45 var(--type);color:var(--muted);margin-top:1.8cqh}
+.reservar+.small,.fr>.small:last-child{margin-top:1.2cqh}
+
+
+.capa-sub{font:700 clamp(.9rem,4.2cqw,1.3rem)/1.3 var(--type);color:var(--ink);background:#f3e7cc;padding:.35em .6em;margin-top:2.4cqh;transform:rotate(-1deg)}
+.role{position:absolute;left:44cqw;bottom:4.5cqh;transform:translateX(-50%);display:flex;align-items:center;gap:2.4cqw;background:var(--ink);color:#fff;padding:1.4cqw 5cqw 1.4cqw 1.4cqw;border-radius:999px;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.role .seta{display:grid;place-items:center;width:clamp(36px,10cqw,52px);aspect-ratio:1;border-radius:50%;background:var(--yellow);color:var(--ink);animation:cutuca 1s ease-in-out 1.2s 3}
+.role .seta svg{width:55%;height:55%}
+.role b{display:block;font:400 clamp(.95rem,4.8cqw,1.5rem)/1 var(--display);text-transform:uppercase}
+.role small{font:700 clamp(.56rem,2.4cqw,.74rem)/1.2 var(--type);letter-spacing:.06em;text-transform:uppercase;color:var(--yellow)}
+@keyframes cutuca{50%{transform:translateY(8px)}}
+@media(prefers-reduced-motion:reduce){.role .seta{animation:none}}
+.off{display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:3.4cqw;margin-top:2.2cqh}
+.off .ate{grid-column:1/-1;font:400 clamp(1.2rem,6.4cqw,2.2rem)/1 var(--display);text-transform:uppercase;margin-bottom:.4cqh}
+.off .selo{display:flex;align-items:flex-start;color:var(--white);background:var(--red);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:1.2cqh 3.4cqw .2cqh;transform:rotate(-3deg)}
+.off .selo b{display:inline-block;transform-origin:50% 100%;font:400 clamp(4rem,27cqw,8.4rem)/.84 var(--display)}
+.off .selo i{font:400 clamp(1.8rem,11cqw,3.4rem)/1 var(--display);font-style:normal;margin-top:.2em}
+.off .o{font:400 clamp(2.4rem,15cqw,4.6rem)/.84 var(--display);text-transform:uppercase;color:var(--red)}
+.off small{grid-column:1/-1;margin-top:2cqh;font:800 clamp(.7rem,3cqw,.92rem)/1.25 var(--sans);text-transform:uppercase;letter-spacing:.04em}
+.ofs{flex:1 1 auto;align-content:space-evenly}
+.ofs{display:grid;gap:2cqh;margin:2.4cqh 0}
+.of{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:1cqh 4.4cqw;background:var(--white);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:1.8cqh 4cqw}
+.of h3{font:400 clamp(1.1rem,6.4cqw,2rem)/1 var(--display);text-transform:uppercase}
+.of h3+p{margin-top:.6cqh;font:400 clamp(.6rem,2.5cqw,.8rem)/1.3 var(--type);color:var(--muted)}
+.of .pr{display:grid;justify-items:end;line-height:1.1}
+.of .pr small{font:700 clamp(.5rem,2.1cqw,.68rem)/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.of .pr s{font:400 clamp(.56rem,2.4cqw,.76rem)/1.2 var(--type);color:var(--muted)}
+.of .pr strong{font:400 clamp(.9rem,4.8cqw,1.5rem)/1 var(--display);color:var(--red);white-space:nowrap}
+.reservar{margin-top:auto;width:100%}
+.pg>.fr.p3{padding:0}
+.show{position:absolute;inset:0;overflow:hidden;background:var(--ink)}
+.show figure{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.show figure.on{opacity:1}
+.show img,.show video{width:100%;height:100%;object-fit:cover;display:block}
+.show figure img{transform:scale(1.14)}
+.show figure:nth-of-type(odd) img{transform-origin:30% 40%}
+.show figure:nth-of-type(even) img{transform-origin:70% 60%}
+.show figure.on img{animation:kb 5.4s linear both}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.14)}}
+@media(prefers-reduced-motion:reduce){.show figure img{transform:none}.show figure.on img{animation:none}}
+.show-top{position:absolute;z-index:2;top:7cqh;left:7cqw;right:7cqw;color:var(--white)}
+.show-top{text-shadow:0 2px 3px rgba(0,0,0,.55),0 0 18px rgba(0,0,0,.35)}
+.show-leg{position:absolute;z-index:2;left:7cqw;right:7cqw;bottom:11cqh;font:700 clamp(1.7rem,8.6cqw,2.8rem)/1 var(--hand);color:var(--yellow);transform:rotate(-2deg);text-shadow:0 2px 3px rgba(0,0,0,.6),0 0 16px rgba(0,0,0,.4)}
+.show-ctl{position:absolute;z-index:3;left:7cqw;right:5cqw;bottom:4cqh;display:flex;align-items:center;justify-content:space-between}
+.show-ctl .pontos{margin:0;gap:0;justify-content:flex-start;color:var(--white)}
+.show-ctl .pontos button{width:20px}
+.cheia-btn{width:44px;height:44px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+.cheia-btn svg{width:20px;height:20px}
+.show-top,.show-leg{transition:opacity .5s}
+.show.cheia{position:fixed;z-index:60;inset:0;container-type:size}
+
+/* versos (aparecem do lado esquerdo no computador) */
+.colado{position:relative;margin:0 auto;width:min(86cqw,100%);display:grid;gap:3.4cqh;padding:5.4cqh 6cqw 4cqh;rotate:-1.5deg;
+ background:#f6efdc;background-image:radial-gradient(rgba(90,60,20,.07) 1px,transparent 1.2px),repeating-linear-gradient(8deg,rgba(120,90,40,.035) 0 1px,transparent 1px 5px),linear-gradient(160deg,rgba(255,255,255,.55),rgba(156,116,64,.12));
+ background-size:3px 3px,100% 100%,100% 100%;box-shadow:0 1px 1px rgba(0,0,0,.25),0 12px 24px -6px rgba(0,0,0,.45)}
+.colado::before,.colado::after{content:"";position:absolute;width:24cqw;height:4.2cqh;background:rgba(242,196,48,.82);box-shadow:0 1px 2px rgba(0,0,0,.18);
+ -webkit-mask:linear-gradient(90deg,transparent,#000 4% 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4% 96%,transparent)}
+.colado::before{top:-1.8cqh;left:-4cqw;rotate:-28deg}
+.colado::after{bottom:-1.6cqh;right:-4cqw;rotate:-24deg}
+.colado .off{margin:0 auto}
+.passos{list-style:none;padding:0;margin:auto 0;display:grid;gap:3cqh;counter-reset:p}
+.passos li{counter-increment:p;display:flex;align-items:center;gap:4cqw;font:400 clamp(.86rem,3.8cqw,1.1rem)/1.35 var(--type)}
+.passos li::before{content:counter(p);flex:none;width:clamp(32px,9cqw,42px);aspect-ratio:1;display:grid;place-items:center;background:var(--yellow);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font:400 clamp(1rem,5cqw,1.5rem)/1 var(--display);rotate:-4deg}
+.passos b{color:var(--red);white-space:nowrap}
+.regras{padding-top:2cqh;border-top:1px dashed rgba(0,0,0,.3)}
+.pg>.bk.p3{padding:0}
+.vid-pg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3cqh;padding:5cqh 6cqw}
+.moldura{position:relative;height:min(74cqh,128cqw);aspect-ratio:9/16;background:#fff;padding:1.4cqh;rotate:-1.5deg;box-shadow:0 1px 1px rgba(0,0,0,.2),0 12px 24px -6px rgba(0,0,0,.4)}
+.moldura::before{content:"";position:absolute;z-index:1;top:-1.8cqh;left:50%;width:22cqw;height:4cqh;translate:-50% 0;rotate:3deg;background:rgba(242,196,48,.82);box-shadow:0 1px 2px rgba(0,0,0,.18)}
+.moldura video{width:100%;height:100%;object-fit:cover;display:block;background:var(--ink)}
+.vid-ctl{position:static;justify-content:center;gap:12px}
+#vid-som .on,#vid-som[aria-pressed=true] .off{display:none}
+#vid-som[aria-pressed=true] .on{display:inline}
+.av-fim{text-align:center;margin-top:2cqh;transform:rotate(-2deg)}
+.rel-l{list-style:none;padding:0;margin:4cqh 0 0;display:grid;gap:2.4cqh}
+.rel-l li{display:flex;align-items:center;gap:4cqw;font:400 clamp(.86rem,3.8cqw,1.1rem)/1.35 var(--type);padding-bottom:2.2cqh;border-bottom:1px dashed rgba(0,0,0,.25)}
+.rel-l svg{flex:none;width:clamp(26px,7.6cqw,34px);height:clamp(26px,7.6cqw,34px);padding:4px;color:#fff;background:var(--red);border:2px solid var(--ink);transform:rotate(-4deg)}
+.rel-l b{font:400 1.3em/1 var(--display);color:var(--red)}
+.verso{align-items:center;justify-content:center;text-align:center;gap:2cqh}
+.verso .bubble{position:relative;background:var(--white);border:3px solid var(--ink);border-radius:16px;padding:3cqh 5cqw;font:600 clamp(.8rem,3.4cqw,1.05rem)/1.45 var(--sans);box-shadow:5px 5px 0 var(--ink);text-align:left}
+.verso .bubble::after{content:"";position:absolute;left:30%;bottom:-18px;border:9px solid transparent;border-top:16px solid var(--ink);border-bottom:0}
+.verso .foto-v{width:66cqw;aspect-ratio:4/3;object-fit:cover;border:2cqw solid #fff;box-shadow:0 8px 18px rgba(0,0,0,.2);transform:rotate(-3deg)}
+.retrato{width:52cqw;aspect-ratio:3/4;border:3px solid var(--ink);background:#fbf7ec;display:grid;place-items:center;position:relative;transform:rotate(-2deg)}
+.retrato svg{width:70%}
+.retrato span{position:absolute;bottom:8px;font:700 .7rem/1 var(--type);letter-spacing:.12em;text-transform:uppercase}
+.marca{font:700 .7rem/1 var(--type);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);opacity:.7}
+
+/* mão do Lucas (sprite opcional) */
+.mao{position:absolute;z-index:999;pointer-events:none;background-repeat:no-repeat;display:none;transform:translateZ(60px)}
+
+/* ============ DEPOIS DA PASTA ============ */
+.faq{background:var(--paper);padding:72px 0}
+.wrap{max-width:860px;margin:0 auto;padding:0 var(--gut)}
+.faq .h2{font-size:clamp(2rem,7vw,3rem);margin-top:10px}
+.qa{margin-top:24px;border-top:3px solid var(--ink)}
+.qa details{border-bottom:3px solid var(--ink)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 2px;font:800 1rem/1.3 var(--sans)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary svg{width:22px;height:22px;flex:none;transition:transform .2s}
+.qa details[open] summary svg{transform:rotate(45deg)}
+.qa .a{padding:0 2px 18px;font:400 .96rem/1.55 var(--type)}
+.qa .a p+p{margin-top:10px}
+footer{background:var(--desk);color:#d8d0c0;padding:40px 0;font:400 .9rem/1.6 var(--type)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+footer img{height:52px;width:auto}
+footer a{color:var(--yellow)}
+
+.only-open{display:none}
+body.aberto .only-open{display:revert}
+body.aberto .only-closed{display:none}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1c-1-.4-2.5-1.9-2.9-2.9l1-1-1-2z"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<div class="top">
+  <img src="../assets/logo.png" alt="Black Friday Village">
+  <div class="relogio" id="cont" aria-live="off"><span class="c-l">A Black começa em</span><span class="c-n" id="cont-n"><span class="c-u"><b>--</b><i>dias</i></span><span class="c-u"><b>--</b><i>horas</i></span><span class="c-u"><b>--</b><i>min</i></span><span class="c-u"><b>--</b><i>seg</i></span></span></div>
+  <a class="btn" href="#descontos" data-ir="1">Ver descontos</a>
+</div>
+
+<main class="desk">
+<div class="scroller" style="--n:5">
+ <div class="stage">
+  <div class="pasta" id="pasta">
+
+   <!-- 0 · CAPA -->
+   <section class="pg" aria-label="Capa">
+    <div class="fr capa">
+     <div class="etq"><div class="eTop"><span>ARQUIVO CONFIDENCIAL</span><span>Nº 2026-BF</span></div>
+      <b>O sumiço das ofertas</b>
+      <div class="eLin"><span>ACHADO</span><em>50% OFF no Village</em></div>
+      <div class="eLin"><span>PARA</span><em>você e a família</em></div>
+      <div class="eSt">STATUS <i>EM ABERTO</i></div></div>
+     <div class="fita" aria-hidden="true">BLACK FRIDAY · CONFIDENCIAL · BLACK FRIDAY · CONFIDENCIAL · BLACK FRIDAY · CONFIDENCIAL · BLACK FRIDAY · CONFIDENCIAL</div>
+     <h1 class="logo"><img src="../assets/cb-logo.png" alt="Caso Black: arquivo secreto" fetchpriority="high"></h1>
+     <img class="selo" src="../assets/cb-confidencial.png" alt="">
+     <div class="elastico" aria-hidden="true"></div>
+     <div class="role"><span class="seta"><svg><use href="#i-down"/></svg></span><b>Ver ofertas</b></div>
+    </div>
+    <div class="bk capa-in">
+     <div class="colado">
+     <div class="achado"><span>Arquivo aberto</span><b id="achado-n">4 ofertas encontradas</b><em id="achado-p"></em></div>
+     <h2 class="off"><span class="ate">Até</span><span class="selo"><b id="off-n">50</b><i>%</i></span><span class="o">OFF</span><small>Pacotes all inclusive</small></h2>
+     </div>
+    </div>
+   </section>
+
+   <!-- 1 · DESCONTOS (verso: hóspedes da reserva) -->
+   <section class="pg" aria-label="Descontos">
+    <div class="fr">
+     <span class="kicker">01 · Os descontos da Black</span>
+     <h2 class="h2">Escolha seu pacote</h2>
+     <div class="ofs" id="ofertas"></div>
+     <p class="small">Riscado = tarifa cheia. Família = 2 adultos + 2 crianças até 10 anos.</p>
+     <a class="btn reservar" href="#reservar" data-ir="2">Escolher as datas <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="bk">
+     <span class="kicker">02 · Reserve agora</span>
+     <h2 class="h2">Como garantir seu desconto</h2>
+     <ol class="passos">
+      <li><span>Escolha o pacote na folha 01.</span></li>
+      <li><span>Marque check-in, check-out e quantas pessoas vão.</span></li>
+      <li><span>Toque em <b>Quero meus <span class="pct-txt">50%</span> OFF</b> para garantir o desconto.</span></li>
+     </ol>
+     <p class="small regras">Viagens até 31/03/2027 · mínimo de 2 diárias · Natal, Réveillon e Carnaval bloqueados. Sujeito à disponibilidade.</p>
+    </div>
+   </section>
+
+   <!-- 2 · RESERVA (verso: fotos do resort) -->
+   <section class="pg" aria-label="Reservar">
+    <div class="fr">
+     <span class="kicker">Quando e quem vai</span>
+     <h2 class="h2">Escolha as datas</h2>
+     <div class="rs-hosp">
+      <div class="cont"><span>Adultos</span><div><button type="button" data-h="ad" data-v="-1" aria-label="Menos adultos">−</button><b id="rs-ad">2</b><button type="button" data-h="ad" data-v="1" aria-label="Mais adultos">+</button></div></div>
+      <div class="cont"><span>Crianças</span><div><button type="button" data-h="cr" data-v="-1" aria-label="Menos crianças">−</button><b id="rs-cr">0</b><button type="button" data-h="cr" data-v="1" aria-label="Mais crianças">+</button></div></div>
+     </div>
+     <div class="cal">
+      <div class="cal-top"><button type="button" id="rs-ant" aria-label="Mês anterior">‹</button><span id="rs-mes"></span><button type="button" id="rs-prox" aria-label="Próximo mês">›</button></div>
+      <div class="cal-sem" aria-hidden="true"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
+      <div class="cal-dias" id="rs-dias"></div>
+     </div>
+     <p class="rs-res" id="rs-res" aria-live="polite">Toque no dia do check-in e depois no do check-out.</p>
+     <a class="btn" id="rs-ir" href="#fim"><span>Quero meus <span id="rs-pct">50%</span> OFF</span> <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="bk p3">
+     <div class="show" id="show">
+      <figure class="on" data-leg="Piscinas aquecidas"><img src="../assets/resort/piscinas-1600.webp" alt="Piscinas aquecidas do Village Resort"></figure>
+      <figure data-leg="Chalés"><img src="../assets/resort/chales-1600.webp" alt="Chalés do Village Resort" loading="lazy"></figure>
+      <figure data-leg="Comida à vontade"><img src="../assets/resort/gastronomia-1600.webp" alt="Gastronomia do Village Resort" loading="lazy"></figure>
+      <figure data-leg="Praia Village"><img src="../assets/resort/praia-1600.webp" alt="Praia Village" loading="lazy"></figure>
+      <figure data-leg="Minifazendinha"><img src="../assets/resort/minifazendinha-1600.webp" alt="Minifazendinha do Village Resort" loading="lazy"></figure>
+      <figure data-leg="Pet também vai"><img src="../assets/resort/pet-1600.webp" alt="Área pet do Village Resort" loading="lazy"></figure>
+      <figure data-leg="Acomodações"><img src="../assets/resort/acomodacoes-1600.webp" alt="Acomodação do Village Resort" loading="lazy"></figure>
+      <figure data-leg="Piscinas e jardim"><img src="../assets/resort/piscinas-jardim-1600.webp" alt="Piscinas e jardim do Village Resort" loading="lazy"></figure>
+      <figure data-leg="Trattoria"><img src="../assets/resort/trattoria-1600.webp" alt="Trattoria do Village Resort" loading="lazy"></figure>
+      <figure data-leg="Vista do alto"><img src="../assets/resort/aerea-1600.webp" alt="Vista aérea do Village Resort" loading="lazy"></figure>
+      <div class="show-top"><span class="kicker">03 · O resort</span><h2 class="h2">Village Resort<br>Jaboticatubas (MG)</h2></div>
+      <p class="show-leg" id="show-leg" aria-live="polite"></p>
+      <div class="show-ctl"><div class="pontos" id="show-pts"></div><button type="button" class="cheia-btn" id="show-cheia" aria-label="Ver em tela cheia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>
+     </div>
+    </div>
+   </section>
+
+   <!-- 3 · VÍDEO DO RESORT (verso: avaliações, 1ª metade) -->
+   <section class="pg" aria-label="Vídeo do resort">
+    <div class="fr p3">
+     <div class="vid-pg">
+      <!-- vídeo: trocar o src pelo vídeo oficial do resort quando chegar -->
+      <div class="moldura"><video id="vid" src="../assets/resort-video.mp4" poster="../assets/resort-video-poster.jpg" muted loop playsinline preload="metadata" aria-label="Vídeo do Village Resort"></video></div>
+      <div class="show-ctl vid-ctl">
+       <button type="button" class="cheia-btn" id="vid-som" aria-label="Ligar o som" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="off" d="M17 9l5 6M22 9l-5 6"/></svg></button>
+       <button type="button" class="cheia-btn" id="vid-cheia" aria-label="Ver vídeo em tela cheia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      </div>
+     </div>
+    </div>
+    <div class="bk">
+     <span class="kicker">04 · Quem já foi</span>
+     <h2 class="h2">O que as famílias dizem</h2>
+     <p class="nota" id="nota" hidden></p>
+     <div class="avs" id="avs-e"></div>
+    </div>
+   </section>
+
+   <!-- 4 · AVALIAÇÕES, 2ª metade (verso: relatório final) -->
+   <section class="pg" aria-label="Avaliações">
+    <div class="fr">
+     <div class="avs" id="avs"></div>
+     <p class="hand av-fim">Agora é a sua vez.</p>
+    </div>
+    <div class="bk rel">
+     <span class="kicker">Relatório final</span>
+     <h2 class="h2">O que a investigação encontrou</h2>
+     <ul class="rel-l">
+      <li><svg><use href="#i-check"/></svg><span>Até <b class="pct-txt">50%</b> OFF nos pacotes</span></li>
+      <li><svg><use href="#i-check"/></svg><span>All inclusive, comida à vontade</span></li>
+      <li><svg><use href="#i-check"/></svg><span>A partir de <b class="rel-p"></b></span></li>
+      <li><svg><use href="#i-check"/></svg><span>Piscinas aquecidas, praia, minifazendinha e área pet</span></li>
+      <li><svg><use href="#i-check"/></svg><span>Jaboticatubas (MG), a 50 min de BH</span></li>
+     </ul>
+    </div>
+   </section>
+
+   <!-- 5 · CASO ENCERRADO (última, não vira) -->
+   <section class="pg" aria-label="Caso encerrado" id="fim">
+    <div class="fr fim">
+     <span class="kicker">05 · Caso encerrado</span>
+     <div class="carimbo-fim">Caso encerrado</div>
+     <h2 class="h2">Achou as ofertas? Garanta antes que sumam.</h2>
+     <p class="fim-l">Até <b class="pct-txt">50%</b> OFF all inclusive<br>a partir de <b id="fim-p"></b></p>
+     <div class="acoes">
+      <a class="btn" href="#reservar" data-ir="2">Escolher as datas <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-zap" id="fim-zap" hidden target="_blank" rel="noopener"><svg><use href="#i-zap"/></svg> Falar no WhatsApp</a>
+     </div>
+    </div>
+   </section>
+
+   <nav class="tabs" aria-label="Seções da pasta">
+    <button data-ir="0">Capa</button><button data-ir="1">Descontos</button><button data-ir="2">Reservar</button><button data-ir="3">Resort</button><button data-ir="4">Hóspedes</button><button data-ir="5">Garantir</button>
+   </nav>
+   <div class="mao" id="mao" aria-hidden="true"></div>
+  </div>
+ </div>
+</div>
+</main>
+
+<a class="zap" id="zap" hidden target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-zap"/></svg></a>
+<section class="faq" id="duvidas">
+  <div class="wrap">
+    <span class="kicker">06 · Dúvidas</span>
+    <h2 class="h2">Dúvidas</h2>
+    <div class="qa">
+      <details><summary><span>Como funciona o desconto de até <span class="pct-txt">50%</span>?</span><svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>O desconto já está aplicado no preço de cada pacote da folha 01. O valor riscado é a tarifa cheia; o de baixo é o que você paga na Black Friday. Não precisa de cupom.</p></div></details>
+      <details><summary>Quais são as ofertas?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Estão na folha 01 da pasta: Bronze, Prata, Ouro e um pacote escondido, o Nióbio, que só aparece na Black Friday. Cada uma mostra preço para casal e para família, número de diárias e datas válidas.</p></div></details>
+      <details><summary>Posso parcelar?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>As formas de pagamento e o número de parcelas de cada oferta aparecem em destaque antes de você fechar a reserva.</p></div></details>
+      <details><summary>Crianças pagam?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>O preço de família já inclui 2 adultos e 2 crianças de até 10 anos. Para mais crianças ou idades acima de 10, o valor é calculado na reserva.</p></div></details>
+      <details><summary>O que está incluso no All Fun Inclusive?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Comida à vontade das 7h às 23h, open bar das 11h às 23h, piscinas aquecidas, recreação das 9h às 21h, Praia Village, fazendinha e Village Adventure. Você não paga nada a mais no resort.</p></div></details>
+      <details><summary>Quais datas posso escolher?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Na folha 02 você escolhe check-in e check-out no calendário. Cada oferta tem um mínimo de diárias e algumas datas, como Natal, Réveillon e Carnaval, podem não estar disponíveis. Tudo sujeito à disponibilidade.</p></div></details>
+      <details><summary>Fica longe de Belo Horizonte?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Não. O Village Resort fica em Jaboticatubas, a cerca de 50 minutos de BH.</p></div></details>
+      <details><summary>Como faço para reservar?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Escolha a oferta na folha 01, marque as datas na folha 02 e toque em reservar. Se preferir, fale com o time de reservas pelo e-mail reservas@villagegroup.com.br ou pelo telefone (31) 3157-7573.</p></div></details>
+      <details><summary>Posso cancelar ou transferir a reserva?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>As regras de cancelamento e transferência aparecem junto com cada oferta, antes da reserva. Leia com atenção: em promoções, a reserva costuma ser não reembolsável.</p></div></details>
+      <details><summary>Tem sorteio ou prêmio em dinheiro?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Não. Os descontos valem para todo mundo que reservar dentro das condições de cada oferta. Não há sorteio nem prêmio em dinheiro.</p></div></details>
+      <details><summary>Viagem em grupo ou empresa?<svg><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Fale com o time de reservas pelo e-mail reservas@villagegroup.com.br ou pelo telefone (31) 3157-7573 para montar uma proposta.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="../assets/logo.png" alt="Village Resort" loading="lazy">
+    <div>Caso Black é uma ação do Village Resort.<br>Fazenda Coqueiral, 84 · Jaboticatubas, MG<br>Reservas: <a href="tel:+553131577573">(31) 3157-7573</a> · <a href="mailto:reservas@villagegroup.com.br">reservas@villagegroup.com.br</a><br>Instagram <a href="https://www.instagram.com/villageresortmg/" target="_blank" rel="noopener">@villageresortmg</a></div>
+  </div>
+</footer>
+
+<script>
+const calmo = matchMedia('(prefers-reduced-motion:reduce)').matches
+/* ===== Configuração ===== */
+const CONFIG = {
+  REVELACAO: '2026-11-27T00:00:00-03:00',
+  LINK_GRUPO: '',   // grupo VIP (WhatsApp)
+  // atendimento no WhatsApp: só números com DDI+DDD (ex. 5537999999999). Vazio = botão não aparece.
+  WHATSAPP: '5531984760195',   // oficial, villageresort.com.br (26/10/2026)
+  WHATSAPP_MSG: 'Oi! Vi o Caso Black e quero saber das ofertas da Black Friday.',
+  // avaliações reais de hóspedes, copiadas da landing oficial outubro-10-10 do Village (26/10/2026)
+  NOTA: '',   // ex. '4,8 no Google'; vazio = some
+  AVALIACOES: [
+    { nome: 'Vera Lúcia de Castro', estrelas: 5, texto: 'Experiência fantástica! Espaço, estrutura e recreação, maravilhosos. Funcionários muito educados e atenciosos, bebidas sempre geladas. Foram dias de muito descanso e diversão para a família toda. Recomendo demais.' },
+    { nome: 'Gustavo Tabordas', estrelas: 5, texto: 'Passamos 5 dias no Village Resort e para nós foram realmente férias inesquecíveis. Estrutura excelente, muita atividade para as crianças e uma equipe de recreação que faz toda a diferença. Voltaremos com certeza.' },
+    { nome: 'Patrícia Lisboa', estrelas: 5, texto: 'Parabenizo muito o Village pela programação de recreação, que foi espetacular todos os dias. A comida é espetacular, deliciosa e bem mineira, o pudim mais disputado que ouro. Nunca descansei tanto em umas férias! É minha terceira vez, e cada vez que venho melhor está o Village.' },
+    { nome: 'Luciana Teodoro', estrelas: 5, texto: 'Foram dias maravilhosos, com excelente estrutura, atendimento acolhedor e uma equipe sempre muito atenciosa. Um dos grandes destaques foi a recreação, extremamente bem organizada, divertida e envolvente. Com certeza voltaremos e recomendamos!' },
+    { nome: 'Waldenia Fernandes', estrelas: 5, texto: 'Minha família escolhe o Village Resort todo ano para curtir uns dias de descanso e lazer. O lugar é lindo, os quartos são amplos, café da manhã impecável. Que pizza deliciosa, meu Deus! Já saímos de lá com saudades. Super indico!' },
+    { nome: 'Larissa Vilela', estrelas: 5, texto: 'Foi uma excelente experiência, desde o orçamento e as reservas até a estadia. Já fui 2 vezes e no Ano Novo vou voltar. Tem atividades para todo mundo e todos os gostos. Se você não foi, vá logo que eu garanto que não vão se arrepender.' }
+  ],
+  // motor de reservas; vazio = botão leva para a ficha.
+  // Aceita {checkin} {checkout} (AAAA-MM-DD), {adultos} e {criancas} no link.
+  LINK_RESERVA: '',
+  // folha de datas. VALORES INVENTADOS (placeholder), trocar pelos do Village:
+  // viagem até 31/03/2027, mínimo 2 diárias, Natal/Réveillon e Carnaval bloqueados.
+  RESERVA: {
+    MIN_DIARIAS: 2, VIAGEM_ATE: '2027-03-31', MAX_ADULTOS: 6, MAX_CRIANCAS: 4,
+    BLOQUEADAS: ['2026-12-24','2026-12-25','2026-12-26','2026-12-27','2026-12-28','2026-12-29','2026-12-30','2026-12-31','2027-01-01',
+      '2027-02-05','2027-02-06','2027-02-07','2027-02-08','2027-02-09','2027-02-10']
+  },
+  // pacotes do briefing (valores com 50% OFF; cheio = valor x 2). Atualizar se o Village mudar
+  OFERTAS: [
+    { nome: 'Bronze', info: '2 diárias · datas a definir', casal: 1200, familia: 1500 },
+    { nome: 'Prata', info: '4 diárias · datas a definir', casal: 2000, familia: 2300 },
+    { nome: 'Ouro', info: '5 diárias · datas a definir', casal: 2700, familia: 3000 },
+    { nome: 'Nióbio', info: '3 diárias · fins de semana e feriados', casal: 2700, familia: 3000 },
+  ],
+  DESCONTO: .5,
+  // mão do Lucas folheando: PNG em tira horizontal, quadros do mesmo tamanho.
+  // Quadro 0 = mão pegando o canto; último = folha passada. Vazio = sem mão.
+  MAO: { src: '', quadros: 12, largura: 240, altura: 240 },
+}
+/* ======================== */
+
+const agora = () => { const q = new URLSearchParams(location.search).get('agora'); return q ? new Date(q) : new Date() }
+document.body.classList.toggle('aberto', agora() >= new Date(CONFIG.REVELACAO))
+for (const a of document.querySelectorAll('[data-link]')) {
+  const url = a.dataset.link === 'grupo' ? CONFIG.LINK_GRUPO : CONFIG.LINK_RESERVA
+  if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener' } else a.hidden = true
+}
+const ofs = document.getElementById('ofertas')
+const real = v => 'R$ ' + v.toLocaleString('pt-BR')
+const preco = (rot, v) => `<div class="pr"><small>${rot}</small><s>${real(v / (1 - CONFIG.DESCONTO))}</s><strong>${real(v)}</strong></div>`
+ofs.innerHTML = CONFIG.OFERTAS.map(o => `<article class="of"><div><h3>${o.nome}</h3><p>${o.info.replace(' · ', '<br>')}</p></div>${preco('Casal', o.casal)}${preco('Família', o.familia)}</article>`).join('')
+for (const a of document.querySelectorAll('[data-reservar]')) {
+  if (CONFIG.LINK_RESERVA) { a.href = CONFIG.LINK_RESERVA; a.target = '_blank'; a.rel = 'noopener' }
+  else a.dataset.ir = 2
+}
+
+document.getElementById('achado-n').textContent = `${CONFIG.OFERTAS.length} ofertas encontradas`
+document.getElementById('achado-p').textContent = 'a partir de ' + real(Math.min(...CONFIG.OFERTAS.map(o => o.casal)))
+document.querySelectorAll('.pct-txt').forEach(e => e.textContent = Math.round(CONFIG.DESCONTO * 100) + '%')
+document.getElementById('off-n').textContent = Math.round(CONFIG.DESCONTO * 100)
+
+const avHtml = a => `<article class="av">
+  <div class="st" aria-label="${a.estrelas} de 5 estrelas">${'★'.repeat(a.estrelas)}${'☆'.repeat(5 - a.estrelas)}</div>
+  <p title="${a.texto}">“${a.texto}”</p><footer>${a.nome}</footer></article>`
+// 3 avaliações por vez
+// metade das avaliações no verso (esquerda), metade na frente (direita)
+const meio = Math.ceil(CONFIG.AVALIACOES.length / 2)
+document.getElementById('avs-e').innerHTML = `<div class="av-g on">${CONFIG.AVALIACOES.slice(0, meio).map(avHtml).join('')}</div>`
+document.getElementById('avs').innerHTML = `<div class="av-g on">${CONFIG.AVALIACOES.slice(meio).map(avHtml).join('')}</div>`
+// troca sozinha os itens de uma lista (avaliações, fotos), só enquanto a folha está aberta
+function rodar(itens, pts, tempo, aoTrocar) {
+  let i = 0, tm = 0, ativo = false
+  pts.innerHTML = itens.map((_, k) => `<button type="button" aria-label="${k + 1} de ${itens.length}"></button>`).join('')
+  const bts = [...pts.children]
+  const agenda = () => { clearTimeout(tm); if (ativo) tm = setTimeout(() => ir(i + 1), tempo(itens[i])) }
+  const ir = k => {
+    i = (k + itens.length) % itens.length
+    itens.forEach((e, j) => { e.classList.toggle('on', j === i); e.setAttribute('aria-hidden', j !== i) })
+    bts.forEach((b, j) => b.setAttribute('aria-current', j === i))
+    aoTrocar?.(itens[i], ativo); agenda()
+  }
+  bts.forEach((b, k) => b.onclick = () => ir(k))
+  ir(0)
+  return on => { if (on === ativo) return; ativo = on; ir(i) }
+}
+const show = document.getElementById('show'), legenda = document.getElementById('show-leg')
+const ligaShow = rodar([...show.querySelectorAll('figure')], document.getElementById('show-pts'),
+  () => 4500,
+  f => {
+    legenda.textContent = f.dataset.leg
+    if (!calmo) legenda.animate([{ opacity: 0, translate: '0 10px' }, { opacity: 1, translate: '0 0' }], { duration: 500, easing: 'ease-out' })
+  })
+const casaShow = show.parentNode
+const telaCheia = on => {
+  show.classList.toggle('cheia', on)
+  on ? document.body.append(show) : casaShow.append(show)
+  document.getElementById('show-cheia').setAttribute('aria-label', on ? 'Fechar tela cheia' : 'Ver em tela cheia')
+  ligaShow(on || ultima === 3)
+}
+document.getElementById('show-cheia').onclick = () => telaCheia(!show.classList.contains('cheia'))
+addEventListener('keydown', e => { if (e.key === 'Escape' && show.classList.contains('cheia')) telaCheia(false) })
+const vid = document.getElementById('vid'), som = document.getElementById('vid-som')
+som.onclick = () => { vid.muted = !vid.muted; som.setAttribute('aria-pressed', !vid.muted); som.setAttribute('aria-label', vid.muted ? 'Ligar o som' : 'Desligar o som') }
+document.getElementById('vid-cheia').onclick = () => { const r = vid.requestFullscreen ? vid.requestFullscreen() : vid.webkitEnterFullscreen?.(); r?.catch?.(() => {}) }
+// fotos rodam com a dupla 2|3 aberta; o vídeo só toca com a frente da folha 3 à vista
+document.addEventListener('folha', e => {
+  ligaShow(e.detail === 3 || show.classList.contains('cheia'))
+  if (e.detail === 3 && !ladoEsq) vid.play().catch(() => {}); else vid.pause()
+})
+if (CONFIG.NOTA) { const n = document.getElementById('nota'); n.textContent = 'Nota ' + CONFIG.NOTA; n.hidden = false }
+const zapUrl = t => `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(t)}`
+if (CONFIG.WHATSAPP) for (const id of ['zap', 'fim-zap']) { const z = document.getElementById(id); z.href = zapUrl(CONFIG.WHATSAPP_MSG); z.hidden = false }
+document.getElementById('fim-p').textContent = document.querySelector('.rel-p').textContent = real(Math.min(...CONFIG.OFERTAS.map(o => o.casal)))
+// contador até a Black (REVELACAO); depois vira aviso fixo
+{ const alvo = new Date(CONFIG.REVELACAO), el = document.getElementById('cont-n'), lb = document.querySelector('#cont .c-l'), d2 = v => String(v).padStart(2, '0')
+  const tique = () => {
+    const r = Math.max(0, alvo - agora()) / 1000
+    if (!r) { lb.textContent = 'Black Friday no ar'; el.textContent = 'até 50% OFF'; return clearInterval(iv) }
+    const v = [Math.floor(r / 86400), Math.floor(r / 3600) % 24, Math.floor(r / 60) % 60, Math.floor(r) % 60].map(d2)
+    el.querySelectorAll('b').forEach((b, k) => b.textContent = v[k])
+  }
+  const iv = setInterval(tique, 1000); tique() }
+
+/* ===== pasta: o scroll vira as folhas para o lado ===== */
+const scroller = document.querySelector('.scroller'), pasta = document.getElementById('pasta')
+const folhas = [...pasta.querySelectorAll('.pg')], N = folhas.length
+const abas = [...pasta.querySelectorAll('.tabs button')]
+const mao = document.getElementById('mao')
+const largo = matchMedia('(min-width:1000px)')
+const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v))
+if (CONFIG.MAO.src) Object.assign(mao.style, { backgroundImage: `url(${CONFIG.MAO.src})`, width: CONFIG.MAO.largura + 'px', height: CONFIG.MAO.altura + 'px', backgroundSize: `${CONFIG.MAO.quadros * 100}% 100%` })
+
+let ultima = -1, ladoEsq = false
+function progresso() {
+  const total = scroller.offsetHeight - innerHeight
+  return clamp(-scroller.getBoundingClientRect().top / total) * (N - 1)
+}
+function desenhar() {
+  const p = progresso()
+  let atualPg = 0, virando = -1, tv = 0
+  folhas.forEach((f, i) => {
+    if (i === N - 1) { f.style.zIndex = 1; return }
+    // celular: vira em .06–.46 do trecho; no computador segura antes e depois de cada virada
+    const t = largo.matches ? ease(clamp((p - i - .12) / .76)) : ease(clamp((p - i - .06) / .4))
+    f.style.transform = `rotateY(${-180 * t}deg)`
+    f.style.zIndex = t > .5 ? 100 + i : 50 - i
+    f.style.setProperty('--sh', Math.sin(t * Math.PI).toFixed(3))
+    if (t >= .5) atualPg = i + 1
+    if (t > 0 && t < 1) { virando = i; tv = t }
+    if (t > 0) entrar(i + 1)
+  })
+  pasta.classList.toggle('lida', p > .15)
+  // computador: a pasta começa fechada no centro e desliza para virar livro aberto
+  // celular: a câmera acompanha a folha virando (mostra o verso), segura e volta para a próxima frente
+  const s = Math.min(N - 2, Math.floor(p)), k = p - s
+  const abre = largo.matches ? ease(clamp((p - .12) / .76)) : k < .53 ? ease(clamp((k - .06) / .4)) : 1 - ease(clamp((k - .62) / .32))
+  pasta.style.transform = `translateX(${(largo.matches ? 50 : 100) * abre}%)`
+  const esq = !largo.matches && abre > .5 // celular mostrando o verso (página da esquerda)
+  if (atualPg !== ultima || esq !== ladoEsq) {
+    ultima = atualPg; ladoEsq = esq
+    folhas.forEach((f, i) => {
+      f.querySelector('.fr').inert = i !== atualPg
+      const b = f.querySelector('.bk'); if (b) b.inert = i !== atualPg - 1
+      f.setAttribute('aria-hidden', i !== atualPg && i !== atualPg - 1)
+    })
+    abas.forEach((b, i) => b.setAttribute('aria-current', i === atualPg))
+    document.dispatchEvent(new CustomEvent('folha', { detail: atualPg }))
+  }
+  if (CONFIG.MAO.src) {
+    mao.style.display = virando >= 0 ? 'block' : 'none'
+    if (virando >= 0) mao.style.backgroundPosition = `${Math.min(CONFIG.MAO.quadros - 1, Math.floor(tv * CONFIG.MAO.quadros)) / (CONFIG.MAO.quadros - 1) * 100}% 0`
+    mao.style.right = `-${CONFIG.MAO.largura * .35}px`; mao.style.bottom = `-${CONFIG.MAO.altura * .2}px`
+  }
+}
+// entradas (receitas HyperFrames, em WAAPI): cascata de baixo nas peças da folha
+// que está sendo revelada e contagem do % com escala crescendo. Roda uma vez por folha.
+const vistas = new Set()
+function entrar(i) {
+  if (calmo || vistas.has(i) || !folhas[i]) return
+  vistas.add(i)
+  const pecas = [...(folhas[i - 1]?.querySelectorAll('.bk > *') ?? []), ...folhas[i].querySelectorAll('.fr > *, .fr .of')].filter(e => !e.matches('.ofs, .show'))
+  pecas.forEach((e, k) => e.animate(
+    [{ translate: '0 28px', opacity: 0, offset: 0 }, { opacity: 1, offset: .01 }, { translate: '0 0', opacity: 1 }],
+    { duration: 520, delay: 120 + k * Math.max(35, 80 - k * 6), easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' }))
+  const n = i === 1 && document.getElementById('off-n')
+  if (n) {
+    const fim = +n.textContent, t0 = performance.now() + 250
+    n.animate([{ scale: .55 }, { scale: 1 }], { duration: 900, delay: 250, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards' })
+    const passo = agora => { const k = clamp((agora - t0) / 900); n.textContent = Math.round(fim * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(passo) }
+    n.textContent = 0; requestAnimationFrame(passo)
+  }
+}
+// a capa passa sozinha para a folha 01 aos 2 s, se a pessoa ainda não rolou nem tocou
+let mexeu = false
+for (const ev of ['wheel', 'touchstart', 'keydown', 'pointerdown']) addEventListener(ev, () => mexeu = true, { once: true, passive: true })
+setTimeout(() => {
+  if (mexeu || scrollY > 10) return
+  const total = scroller.offsetHeight - innerHeight, alvo = scroller.offsetTop + total / (N - 1), y0 = scrollY, t0 = performance.now()
+  const passo = t => { const k = clamp((t - t0) / 1100); scrollTo(0, y0 + (alvo - y0) * (1 - Math.pow(1 - k, 3))); if (k < 1 && !mexeu) requestAnimationFrame(passo) }
+  requestAnimationFrame(passo)
+}, 2000)
+
+let pedido = false
+addEventListener('scroll', () => { if (!pedido) { pedido = true; requestAnimationFrame(() => { pedido = false; desenhar() }) } }, { passive: true })
+addEventListener('resize', desenhar)
+desenhar()
+
+function irPara(i) {
+  const total = scroller.offsetHeight - innerHeight
+  const y = scroller.offsetTop + total * (i / (N - 1))
+  scrollTo({ top: y, behavior: matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth' })
+}
+// folha de reserva: hóspedes + calendário de check-in/check-out
+const RS = CONFIG.RESERVA, MESES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+const br = d => `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`
+const hoje = agora(); hoje.setHours(0, 0, 0, 0)
+const limite = RS.VIAGEM_ATE ? new Date(RS.VIAGEM_ATE + 'T00:00') : null
+const rs = { ad: 2, cr: 0, ini: null, fim: null, mes: new Date(hoje.getFullYear(), hoje.getMonth(), 1) }
+const $ = id => document.getElementById(id)
+$('rs-pct').textContent = Math.round(CONFIG.DESCONTO * 100) + '%'
+const noites = () => rs.ini && rs.fim ? Math.round((rs.fim - rs.ini) / 864e5) : 0
+function reserva() {
+  const y = rs.mes.getFullYear(), m = rs.mes.getMonth()
+  let h = '<i></i>'.repeat(new Date(y, m, 1).getDay())
+  for (let d = 1; d <= new Date(y, m + 1, 0).getDate(); d++) {
+    const dt = new Date(y, m, d), k = iso(dt)
+    const off = dt < hoje || (limite && dt > limite) || RS.BLOQUEADAS.includes(k)
+    const c = +dt === +rs.ini ? 'ini' : +dt === +rs.fim ? 'fim' : rs.ini && rs.fim && dt > rs.ini && dt < rs.fim ? 'meio' : ''
+    h += `<button type="button" data-d="${k}" class="${c}"${off ? ' disabled' : ''}>${d}</button>`
+  }
+  $('rs-dias').innerHTML = h
+  $('rs-mes').textContent = `${MESES[m]} ${y}`
+  $('rs-ant').disabled = +rs.mes <= +new Date(hoje.getFullYear(), hoje.getMonth(), 1)
+  $('rs-prox').disabled = limite && +new Date(y, m + 1, 1) > +limite
+  $('rs-ad').textContent = rs.ad; $('rs-cr').textContent = rs.cr
+  const n = noites()
+  $('rs-res').textContent = !rs.ini ? 'Toque no dia do check-in e depois no do check-out.'
+    : !rs.fim ? `Check-in ${br(rs.ini)}. Agora toque no check-out.`
+    : n < RS.MIN_DIARIAS ? `Mínimo de ${RS.MIN_DIARIAS} diárias.`
+    : `${br(rs.ini)} a ${br(rs.fim)} · ${n} diárias · ${rs.ad} adulto${rs.ad > 1 ? 's' : ''}${rs.cr ? ` e ${rs.cr} criança${rs.cr > 1 ? 's' : ''}` : ''}`
+}
+$('rs-dias').addEventListener('click', e => {
+  const b = e.target.closest('button[data-d]'); if (!b) return
+  const dt = new Date(b.dataset.d + 'T00:00')
+  // período não pode atravessar dia bloqueado
+  const cruza = rs.ini && RS.BLOQUEADAS.some(k => { const x = new Date(k + 'T00:00'); return x > rs.ini && x < dt })
+  if (!rs.ini || rs.fim || dt <= rs.ini || cruza) { rs.ini = dt; rs.fim = null } else rs.fim = dt
+  reserva()
+})
+document.querySelectorAll('[data-h]').forEach(b => b.addEventListener('click', () => {
+  const k = b.dataset.h, max = k === 'ad' ? RS.MAX_ADULTOS : RS.MAX_CRIANCAS
+  rs[k] = Math.min(max, Math.max(k === 'ad' ? 1 : 0, rs[k] + +b.dataset.v)); reserva()
+}))
+$('rs-ant').addEventListener('click', () => { rs.mes = new Date(rs.mes.getFullYear(), rs.mes.getMonth() - 1, 1); reserva() })
+$('rs-prox').addEventListener('click', () => { rs.mes = new Date(rs.mes.getFullYear(), rs.mes.getMonth() + 1, 1); reserva() })
+$('rs-ir').addEventListener('click', e => {
+  e.preventDefault()
+  if (noites() < RS.MIN_DIARIAS) { $('rs-res').textContent = `Escolha check-in e check-out (mínimo de ${RS.MIN_DIARIAS} diárias).`; return }
+  const v = { checkin: iso(rs.ini), checkout: iso(rs.fim), adultos: rs.ad, criancas: rs.cr }
+  // sem motor de reservas: manda as datas pelo WhatsApp; sem WhatsApp, vai ao fechamento
+  if (!CONFIG.LINK_RESERVA) return CONFIG.WHATSAPP
+    ? window.open(zapUrl(`${CONFIG.WHATSAPP_MSG} Datas: ${rs.ini.toLocaleDateString('pt-BR')} a ${rs.fim.toLocaleDateString('pt-BR')}, ${rs.ad} adulto(s) e ${rs.cr} criança(s).`), '_blank', 'noopener')
+    : irPara(N - 1)
+  window.open(CONFIG.LINK_RESERVA.replace(/\{(\w+)\}/g, (_, k) => v[k] ?? ''), '_blank', 'noopener')
+})
+reserva()
+document.querySelectorAll('[data-ir]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); irPara(+b.dataset.ir) }))
+if (['#fim', '#ficha', '#entrar'].includes(location.hash)) addEventListener('load', () => irPara(N - 1))
+
+</script>
+</body>
+</html>

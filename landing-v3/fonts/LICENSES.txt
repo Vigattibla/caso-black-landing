@@ -1,0 +1,23 @@
+Copyright 2020 The Anton Project Authors (https://github.com/googlefonts/AntonFont.git)
+
+Anton
+
+https://scripts.sil.org/OFL
+
+Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
+
+Caveat
+
+http://scripts.sil.org/OFL
+
+Copyright 2015 The Courier Prime Project Authors (https://github.com/quoteunquoteapps/CourierPrime).
+
+Courier Prime
+
+Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+
+Montserrat SemiBold
+
+https://openfontlicense.org
+
+Montserrat ExtraBold
