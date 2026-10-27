@@ -798,15 +798,6 @@ function entrar(i) {
     n.textContent = 0; requestAnimationFrame(passo)
   }
 }
-// a capa passa sozinha para a folha 01 aos 2 s, se a pessoa ainda não rolou nem tocou
-let mexeu = false
-for (const ev of ['wheel', 'touchstart', 'keydown', 'pointerdown']) addEventListener(ev, () => mexeu = true, { once: true, passive: true })
-setTimeout(() => {
-  if (mexeu || scrollY > 10) return
-  const total = scroller.offsetHeight - innerHeight, alvo = scroller.offsetTop + total / (N - 1), y0 = scrollY, t0 = performance.now()
-  const passo = t => { const k = clamp((t - t0) / 1100); scrollTo(0, y0 + (alvo - y0) * (1 - Math.pow(1 - k, 3))); if (k < 1 && !mexeu) requestAnimationFrame(passo) }
-  requestAnimationFrame(passo)
-}, 2000)
 // no celular, deslizar pro lado também vira a página (meia folha por gesto: frente ↔ verso)
 let tx = null, ty = 0
 addEventListener('touchstart', e => { if (largo.matches || e.touches.length > 1 || e.target.closest('input,textarea,select,.cal')) { tx = null; return } tx = e.touches[0].clientX; ty = e.touches[0].clientY }, { passive: true })
