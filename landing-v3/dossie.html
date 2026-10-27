@@ -79,7 +79,7 @@ a{color:inherit}
 .pontos button::after{content:"";width:9px;height:9px;border-radius:50%;border:2px solid currentColor}
 .pontos button[aria-current=true]::after{background:currentColor}
 .nota{font:800 clamp(.72rem,3.2cqw,1rem)/1.2 var(--sans);text-transform:uppercase;margin-top:1cqh}
-@media(max-width:999px){.top{padding:8px var(--gut);background:var(--ink)}.stage{padding-top:54px!important}.pasta{--h:min(calc(100svh - 110px),790px)!important}}
+@media(max-width:999px){.top{padding:8px var(--gut);background:var(--ink)}.stage{padding-top:54px!important}.pasta{--h:min(calc(100svh - 110px),790px)!important}.show-ctl{margin-right:48px}}
 
 /* mesa */
 .desk{background:var(--desk)}
@@ -328,6 +328,64 @@ footer{background:var(--desk);color:#d8d0c0;padding:40px 0;font:400 .9rem/1.6 va
 footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
 footer img{height:52px;width:auto}
 footer a{color:var(--yellow)}
+
+/* Acabamento exclusivo do celular; geometria e estilos desktop preservados. */
+@media(max-width:999px){
+  .pasta{--page-gut:6cqw;max-width:calc(100vw - 48px);margin-right:0}
+  .pg>.fr:not(.capa),.pg>.bk{padding:4cqh var(--page-gut) 3cqh}
+  .pg>.fr.p3,.pg>.bk.p3{padding:0}
+  .tabs{gap:5px}
+  .tabs button{font-size:10px;letter-spacing:.08em;padding:.9em 4px;margin-left:-2px;border-radius:0 5px 5px 0}
+  .tabs button[aria-current=true]{padding-right:6px}
+  /* No repouso do verso, a próxima frente fica fora da área de leitura. */
+  .pasta[style*="translateX(100%)"] .pg>.fr{visibility:hidden}
+  .kicker{font-size:13px;line-height:1.2;letter-spacing:.08em}
+  .h2{margin-top:1.2cqh}
+  .small{font-size:13px;line-height:1.35;color:#51483c}
+  .fr.fim .kicker{top:4cqh;left:var(--page-gut)}
+
+  .ofs{flex:1 1 0;min-height:0;grid-auto-rows:minmax(112px,1fr);align-content:stretch;gap:1.2cqh;margin:1.8cqh 0;overflow-y:auto;padding:0 4px 5px 0}
+  .of{--tier:#805137;grid-template-columns:minmax(0,1fr) repeat(2,minmax(0,.83fr));gap:2cqw;padding:1cqh 2.4cqw;border-width:2px;border-left:6px solid var(--tier);box-shadow:3px 3px 0 #3c3024;background:#fffdf6}
+  .of:nth-child(2){--tier:#505b62}
+  .of:nth-child(3){--tier:#796018}
+  .of:nth-child(4){--tier:#584567}
+  .of>div{min-width:0}
+  .of h3{display:table;border:1.5px solid currentColor;padding:.12em .18em;color:var(--tier);font-size:clamp(20px,6.4cqw,27px);letter-spacing:.02em;transform:rotate(-2deg)}
+  .of h3+p{margin-top:1cqh;font-size:13px;line-height:1.2;color:#443c32}
+  .of .pr{justify-items:center;align-content:center;gap:4px;min-height:74px;padding:6px 1px;background:#f4eddd;border:1px dashed var(--tier);color:var(--tier)}
+  .of .pr small{font-size:13px;letter-spacing:0;color:#443c32}
+  .of .pr s{font-size:13px;color:#655747}
+  .of .pr strong{font-size:clamp(21px,6.5cqw,29px);color:var(--red)}
+  .ofs+.small{margin:0 0 1.2cqh}
+  .ofs~.reservar{flex:none;margin-top:0;font-size:13px;padding:0 .8em}
+
+  .passos{flex:1;min-height:0;margin:2.4cqh 0;gap:0;grid-template-rows:repeat(3,1fr)}
+  .passos li{gap:3.4cqw;padding:2cqh 0;font-size:clamp(15px,4.6cqw,18px);border-bottom:1px dashed #c5b797}
+  .passos li:last-child{border-bottom:0}
+  .passos b{white-space:normal}
+  .regras{flex:none;margin-top:0;padding-top:1.8cqh}
+  .colado{width:100%;padding:4cqh 4cqw;gap:3cqh}
+  .achado{max-width:100%;padding:1.8cqh 3cqw}
+  .rel-l{flex:1;min-height:0;margin-top:2.4cqh;gap:0;grid-template-rows:repeat(5,1fr)}
+  .rel-l li{padding:1.4cqh 0;font-size:clamp(14px,4.2cqw,18px);gap:3cqw}
+
+  /* Título, foto, legenda e controles em quatro áreas separadas. */
+  .show{display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;gap:2cqh;padding:4cqh var(--page-gut) 3cqh;background:var(--paper-b)}
+  .show-top{position:static;grid-area:1/1;color:var(--ink);text-shadow:none}
+  .show-top .h2{font-size:clamp(23px,7.4cqw,34px);line-height:1.05}
+  .show figure{position:relative;inset:auto;grid-area:2/1;align-self:center;justify-self:center;width:100%;height:auto;max-height:100%;aspect-ratio:4/5;min-height:0;padding:2.2cqw 2.2cqw 5cqw;background:#fffdf7;box-shadow:0 2px 3px #0003,0 8px 16px #0002;transform:rotate(-1deg)}
+  .show figure::before{content:"";position:absolute;z-index:1;top:-1.1cqh;left:34%;width:32%;height:3cqh;background:rgba(242,196,48,.8);transform:rotate(4deg);box-shadow:0 1px 2px #0002}
+  .show figure img,.show figure.on img{transform:none;animation:none}
+  .show figure img{object-fit:cover}
+  .show-leg{position:static;grid-area:3/1;min-height:2.2em;font-size:clamp(24px,8cqw,32px);line-height:1.1;color:var(--blue);text-shadow:none;transform:rotate(-1deg)}
+  .show>.show-ctl{position:static;grid-area:4/1;gap:6px;min-width:0}
+  .show-ctl .pontos{min-width:0;flex:1;justify-content:space-between}
+  .show-ctl .pontos button{width:auto;min-width:0;flex:1;min-height:32px;color:var(--ink)}
+  .show-ctl .pontos button::after{width:7px;height:7px}
+  .show>.show-ctl .cheia-btn{flex:none}
+  .show.cheia{--page-gut:6cqw;padding:calc(env(safe-area-inset-top) + 20px) var(--page-gut) calc(env(safe-area-inset-bottom) + 20px)}
+  .show.cheia figure{width:min(100%,48svh);aspect-ratio:4/5}
+}
 
 .only-open{display:none}
 body.aberto .only-open{display:revert}
@@ -739,6 +797,17 @@ setTimeout(() => {
   const passo = t => { const k = clamp((t - t0) / 1100); scrollTo(0, y0 + (alvo - y0) * (1 - Math.pow(1 - k, 3))); if (k < 1 && !mexeu) requestAnimationFrame(passo) }
   requestAnimationFrame(passo)
 }, 2000)
+// no celular, deslizar pro lado também vira a página (meia folha por gesto: frente ↔ verso)
+let tx = null, ty = 0
+addEventListener('touchstart', e => { if (largo.matches || e.touches.length > 1 || e.target.closest('input,textarea,select,.cal')) { tx = null; return } tx = e.touches[0].clientX; ty = e.touches[0].clientY }, { passive: true })
+addEventListener('touchend', e => {
+  if (tx === null) return
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty; tx = null
+  if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.4) return
+  const total = scroller.offsetHeight - innerHeight, passo = total / (N - 1) / 2
+  const atual = Math.round((scrollY - scroller.offsetTop) / passo), alvo = clamp(atual + (dx < 0 ? 1 : -1), 0, (N - 1) * 2)
+  scrollTo({ top: scroller.offsetTop + alvo * passo, behavior: 'smooth' })
+}, { passive: true })
 
 let pedido = false
 addEventListener('scroll', () => { if (!pedido) { pedido = true; requestAnimationFrame(() => { pedido = false; desenhar() }) } }, { passive: true })
