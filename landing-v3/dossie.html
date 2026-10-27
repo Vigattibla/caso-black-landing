@@ -338,7 +338,12 @@ footer a{color:var(--yellow)}
   .tabs button{font-size:10px;letter-spacing:.08em;padding:.9em 4px;margin-left:-2px;border-radius:0 5px 5px 0}
   .tabs button[aria-current=true]{padding-right:6px}
   /* No repouso do verso, a próxima frente fica fora da área de leitura. */
-  .pasta[style*="translateX(100%)"] .pg>.fr{visibility:hidden}
+  .pasta::before,.pasta .pg>.fr{opacity:calc(1 - var(--esq,0))}
+  /* Android: troca filtros e mesclas caros por versões planas */
+  .and .stage::before{filter:none;inset:0}
+  .and .stage::after{background:radial-gradient(75% 65% at 50% 50%,rgba(13,13,13,.6),rgba(13,13,13,.92))}
+  .and .capa::before,.and .capa-in::before{mix-blend-mode:normal;opacity:.18}
+  .and .pasta::before{box-shadow:0 12px 24px rgba(0,0,0,.5)}
   .kicker{font-size:13px;line-height:1.2;letter-spacing:.08em}
   .h2{margin-top:1.2cqh}
   .small{font-size:13px;line-height:1.35;color:#51483c}
@@ -724,6 +729,7 @@ const folhas = [...pasta.querySelectorAll('.pg')], N = folhas.length
 const abas = [...pasta.querySelectorAll('.tabs button')]
 const mao = document.getElementById('mao')
 const largo = matchMedia('(min-width:1000px)')
+if (/Android/i.test(navigator.userAgent)) document.documentElement.classList.add('and')
 const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v))
 if (CONFIG.MAO.src) Object.assign(mao.style, { backgroundImage: `url(${CONFIG.MAO.src})`, width: CONFIG.MAO.largura + 'px', height: CONFIG.MAO.altura + 'px', backgroundSize: `${CONFIG.MAO.quadros * 100}% 100%` })
@@ -753,6 +759,8 @@ function desenhar() {
   const s = Math.min(N - 2, Math.floor(p)), k = p - s
   const abre = largo.matches ? ease(clamp((p - .12) / .76)) : k < .53 ? ease(clamp((k - .06) / .4)) : 1 - ease(clamp((k - .62) / .32))
   pasta.style.transform = `translateX(${(largo.matches ? 50 : 100) * abre}%)`
+  // celular no verso: some com o lado direito (fundo kraft + próxima frente) pra não vazar marrom na borda
+  pasta.style.setProperty('--esq', largo.matches ? 0 : clamp((abre - .55) / .35).toFixed(3))
   const esq = !largo.matches && abre > .5 // celular mostrando o verso (página da esquerda)
   if (atualPg !== ultima || esq !== ladoEsq) {
     ultima = atualPg; ladoEsq = esq
