@@ -45,6 +45,7 @@ a{color:inherit}
 /* ============ TOPO FIXO ============ */
 .top{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px var(--gut);
   background:linear-gradient(180deg,rgba(20,17,14,.95),rgba(20,17,14,0))}
+.top .vr{position:absolute;left:var(--gut);height:34px;width:auto}
 .relogio{display:flex;align-items:center;gap:10px;color:#f4f1ea}
 .relogio .c-l{font:700 .6rem/1.2 var(--type);letter-spacing:.14em;text-transform:uppercase;max-width:8.5em}
 .relogio .c-n{display:flex;gap:4px;font:400 1.15rem/1 var(--display);color:var(--yellow);text-transform:uppercase}
@@ -79,7 +80,7 @@ a{color:inherit}
 .pontos button::after{content:"";width:9px;height:9px;border-radius:50%;border:2px solid currentColor}
 .pontos button[aria-current=true]::after{background:currentColor}
 .nota{font:800 clamp(.72rem,3.2cqw,1rem)/1.2 var(--sans);text-transform:uppercase;margin-top:1cqh}
-@media(max-width:999px){.top{padding:8px var(--gut);background:var(--ink)}.stage{padding-top:54px!important}.pasta{--h:min(calc(100svh - 110px),790px)!important}.show-ctl{margin-right:48px}}
+@media(max-width:999px){.top{padding:8px var(--gut);background:var(--ink)}.stage{padding-top:54px!important}.pasta{--h:min(calc(100svh - 110px),790px)!important}.show-ctl{margin-right:48px}.top{justify-content:space-between}.top .vr{position:static;height:26px}}
 
 /* mesa */
 .desk{background:var(--desk)}
@@ -410,6 +411,7 @@ body.aberto .only-closed{display:none}
 </svg>
 
 <div class="top">
+  <img class="vr" src="../assets/village-resort-branco.svg" alt="Village Resort" width="140" height="58">
   <div class="relogio" id="cont" aria-live="off"><span class="c-l">A Black começa em</span><span class="c-n" id="cont-n"><span class="c-u"><b>--</b><i>dias</i></span><span class="c-u"><b>--</b><i>horas</i></span><span class="c-u"><b>--</b><i>min</i></span><span class="c-u"><b>--</b><i>seg</i></span></span></div>
 </div>
 
@@ -593,7 +595,7 @@ body.aberto .only-closed{display:none}
 
 <footer>
   <div class="wrap">
-    <img src="../assets/logo.png" alt="Village Resort" loading="lazy">
+    <img src="../assets/village-resort-branco.svg" alt="Village Resort" loading="lazy">
     <div>Caso Black é uma ação do Village Resort.<br>Fazenda Coqueiral, 84 · Jaboticatubas, MG<br>Reservas: <a href="tel:+553131577573">(31) 3157-7573</a> · <a href="mailto:reservas@villagegroup.com.br">reservas@villagegroup.com.br</a><br>Instagram <a href="https://www.instagram.com/villageresortmg/" target="_blank" rel="noopener">@villageresortmg</a></div>
   </div>
 </footer>
