@@ -338,7 +338,7 @@ footer a{color:var(--yellow)}
   .tabs button{font-size:10px;letter-spacing:.08em;padding:.9em 4px;margin-left:-2px;border-radius:0 5px 5px 0}
   .tabs button[aria-current=true]{padding-right:6px}
   /* No repouso do verso, a próxima frente fica fora da área de leitura. */
-  .pasta::before,.pasta .pg>.fr{opacity:calc(1 - var(--esq,0))}
+  .pasta::before{opacity:calc(1 - var(--esq,0))}
   /* Android: troca filtros e mesclas caros por versões planas */
   .and .stage::before{filter:none;inset:0}
   .and .stage::after{background:radial-gradient(75% 65% at 50% 50%,rgba(13,13,13,.6),rgba(13,13,13,.92))}
